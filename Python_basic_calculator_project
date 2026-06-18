@@ -1,0 +1,232 @@
+## 1. Syntax and Semantics
+
+###Question 1: Write a Python program to print "Hello, World!".###
+print("Hello, World!")
+
+
+###Question 2: Write a Python program that takes a user input and prints it.###
+# input
+name = input("What is your name? ")
+print(f"Hello, {name}!")
+
+
+###Question 3: Write a Python program to check if a number is positive, negative, or zero.###
+num_input = input("Enter a number: ")
+num = float(num_input)
+
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+
+###Question 4: Write a Python program to find the largest of three numbers.###
+a = float(input("Enter the first number: "))
+b = float(input("Enter the second number: "))   
+c = float(input("Enter the third number: "))
+
+if a >= b and a >= c:
+    largest = a
+elif b >= a and b >= c:
+    largest = b
+else:
+    largest = c
+
+print(f"The largest number is: {largest}")
+
+
+###Question 5: Write a Python program to calculate the factorial of a number.###
+# input from user
+num = int(input("Enter a number: "))
+
+factorial = 1
+
+# Check for negative numbers
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    for i in range(1, num + 1):
+        factorial *= i
+    print(f"The factorial of {num} is: {factorial}")
+
+
+## 2. Variables and Data Types
+
+###Question 6:### Create variables of different data types: integer, float, string, and boolean. Print their values and types.
+integer_var = 10 
+float_var = 3.14
+string_var = "Hello" 
+Boolean_var = True
+
+print("Integer Value", integer_var)
+print("Type:", type(integer_var))
+
+print("Float Value:", float_var)
+print("Type:", type(float_var)) 
+
+print("String Value:", string_var)
+print("Type:", type(string_var))
+
+print("Boolean Value:", Boolean_var)
+print("Type:", type(Boolean_var))
+
+
+###Question 7:### Write a Python program to swap the values of two variables.
+a = input("Enter the first number: ")
+b = input("Enter the second number: ")
+
+print("\nBefore swapping:")
+print("a =", a)
+print("b =", b)
+
+a,b = b,a
+print("\nAfter swapping:")
+print("a =", a)
+print("b =", b)
+
+
+###Question 8:### Write a Python program to convert Celsius to Fahrenheit.
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print("Temperature in Fahrenheit:", fahrenheit)
+
+
+###Question 9:### Write a Python program to concatenate two strings.
+a = input("Enter the first name: ")
+b = input("Enter the last name: ")
+sum = a + b
+print("Concatenate String:", sum)
+
+
+###Question 10:### Write a Python program to check if a variable is of a specific data type.
+a = int(input("Enter the Birth year: "))
+
+if isinstance(a, int):
+    print("The number is an integer.")  
+else:
+    print("The number is not an integer.")
+
+
+## 3. Basic Operators (Arithmetic, Comparison, Logical)
+
+##Question 11:## Write a Python program to perform arithmetic operations: addition, subtraction, multiplication, and division.
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num2
+
+if num2 != 0:
+    division = num1 / num2
+else:
+    division = "Cannot divide by zero"
+
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
+
+
+###Question 12:### Write a Python program to demonstrate comparison operators: equal to, not equal to, greater than, less than.
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+
+print("Equal to (a==b)", a == b)
+print("Not equal to (a!=b)", a != b)
+print("Greater than (a>b)", a > b)
+print("Less than (a<b)", a < b)
+
+
+###Question 13:### Write a Python program to demonstrate logical operators: and, or, not.
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+
+print("AND Operator (a > 0 and b > 0)", a > 0 and b > 0)
+print("OR Operator (a > 0 or b > 0)", a > 0 or b > 0)
+print("NOT Operator (not a > 0)", not a > 0)
+
+
+###Question 14:### Write a Python program to calculate the square of a number.
+a = int(input("Enter the first number: "))
+
+square = a ** 2
+print("Square of the number:", square)
+
+
+###Question 15:### Write a Python program to check if a number is even or odd.
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+
+###Question 16:### Write a Python program to find the sum of the first n natural numbers.
+n = int(input("Enter a number: "))
+
+sum_num = 0 
+
+for i in range(1, n + 1):
+    sum_num += i
+
+print(f"The sum of the first {n} natural numbers is: {sum_num}")
+
+
+###Question 17:### Write a Python program to check if a year is a leap year.
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+
+
+###Question 18:### Write a Python program to reverse a string.
+text = input("Enter a string: ")
+reversed_text = text[::-1]
+print("Reversed string:", reversed_text)
+
+
+###Question 19:### Write a Python program to check if a string is a palindrome.
+text = input("Enter a string: ")
+
+if text == text[::-1]:
+    print("The string is a palindrome.")    
+else:
+    print("The string is not a palindrome.")
+
+
+###Question 20:### Write a Python program to sort a list of numbers in ascending order.
+num = input("Enter a number: ")
+
+num_list = list(map(int, num.split()))
+num_list.sort()
+print("Sorted numbers:", num_list)
+
+
+
+## Assignment Questions
+## Simple calculator program 
+## Take user input
+num1 = float(input("Enter the first number: "))
+operation = input("Enter the operation (+, -, *, /): ")
+num2 = float(input("Enter the second number: "))
+
+
+if operation == '+':
+    result = num1 + num2
+elif operation == '-':
+    result = num1 - num2
+elif operation == '*':
+    result = num1 * num2
+elif operation == '/':
+    if num2 !=0:
+        result = num1 / num2
+    else:
+        result = "Cannot divide by zero"
+    result = num1 / num2
+
+print("Result:", result)
